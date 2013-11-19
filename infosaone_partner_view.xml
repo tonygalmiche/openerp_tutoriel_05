@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="infosaone_view_partner_tree" model="ir.ui.view">
+            <field name="name">infosaone.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+
+              <field name="email" position="after">
+                <field name="street"/>
+                <field name="zip"/>
+                <field name="city"/>
+              </field>
+
+            </field>
+        </record>
+
+    </data>
+</openerp>
