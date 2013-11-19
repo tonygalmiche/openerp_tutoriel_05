@@ -2,17 +2,30 @@
 <openerp>
     <data>
 
+        <!-- L'identifiant de la nouvelle vue n'a pas d'importance mais doit être unique -->
         <record id="infosaone_view_partner_tree" model="ir.ui.view">
+
+            <!-- Ce champ n'a pas d'importance. Il permet uniquement de retrouver la vue dans la liste des vues -->
             <field name="name">infosaone.partner.tree</field>
+
+            <!-- Ce champ est indispensable pour identifier l'objet sur lequel la vue porte -->
             <field name="model">res.partner</field>
+
+            <!-- Ce champ précise que l'on souhiate surcharger la vue précisée et non pas créer une nouvelle vue -->
+            <!-- Il est toujours préférable de surcharger une vue existante plutôt que d'en créer une nouvelle -->
+            <!-- Doc : https://doc.openerp.com/6.0/developer/2_6_views_events/views/view_inheritence/ -->
             <field name="inherit_id" ref="base.view_partner_tree"/>
+
+
             <field name="arch" type="xml">
 
+              <!-- Cette partie indique qu'il faut ajouter 3 champs après le champ 'email' -->
               <field name="email" position="after">
                 <field name="street"/>
                 <field name="zip"/>
                 <field name="city"/>
               </field>
+
 
             </field>
         </record>
