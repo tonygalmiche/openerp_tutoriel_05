@@ -1,4 +1,4 @@
-InfoSaône / OpenERP Tutoriel 05
+InfoSaône / OpenERP Tutoriel 05 - Modification d'une vue liste
 ===================
 
 Le but de ce module est de montrer comment modifier une vue (liste) existante.
